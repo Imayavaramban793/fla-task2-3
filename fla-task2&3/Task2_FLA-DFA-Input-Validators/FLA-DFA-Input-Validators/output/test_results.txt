@@ -1,0 +1,7 @@
+mobile    110584 strings, no mismatch
+plate      51536 strings, no mismatch
+time       78001 strings, no mismatch
+states  mobile direct/product/minimal: 11 11 11
+states  plate  built/minimal: 11 11
+states  time   built/minimal: 7 7
+TOTAL 240121 strings checked: ALL PASSED

@@ -1,0 +1,12 @@
+== DPDA trace, nested tags ==
+(s,abBA,Z) ⊢ (q1,bBA,aZ) ⊢ (q1,BA,baZ) ⊢ (q1,A,aZ) ⊢ (q1,ε,Z) ⊢ (q0,ε,Z)   ACCEPT
+'abAB': REJECT (no computation reaches an accepting configuration)
+
+== Ambiguity: x|x&x in the ORIGINAL boolean grammar ==
+  B[B[x] | B[B[x] & B[x]]]
+  B[B[B[x] | B[x]] & B[x]]
+  trees in revised grammar: 1
+  CFG->PDA (nondeterministic) explored 50 configurations, accept=True
+
+== a^n b^2n DPDA ==
+(p,aabbbb,Z) ⊢ (p,abbbb,XXZ) ⊢ (p,bbbb,XXXXZ) ⊢ (r,bbb,XXXZ) ⊢ (r,bb,XXZ) ⊢ (r,b,XZ) ⊢ (r,ε,Z) ⊢ (f,ε,Z)   ACCEPT

@@ -1,0 +1,7 @@
+tags   : 274 balanced strings (len<=8); ambiguous in original: 88, in revised: 0
+tags   : e.g. aAaAaA trees (orig) = 2 | aAaAaAaA = 5
+bool   : 80 valid strings (len<=6); ambiguous in original: 34, in revised: 0
+bool   : 2000 random expressions evaluated = Python's own result
+bool   : x|x&x with x=(T,F,F) -> True (precedence), vs (x|x)&x -> False
+anb2n  : DPDA, CFG and CFG->PDA agree with a^n b^2n checker (len<=14)
+TOTAL  176132 exhaustive strings + 36 listed cases + 2000 random: ALL PASSED

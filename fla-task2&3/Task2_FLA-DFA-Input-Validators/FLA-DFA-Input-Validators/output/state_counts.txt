@@ -1,0 +1,4 @@
+Validator   States built   Minimal
+mobile                11        11
+plate                 11        11
+time                   7         7

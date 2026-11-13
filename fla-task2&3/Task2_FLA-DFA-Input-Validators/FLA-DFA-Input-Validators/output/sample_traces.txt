@@ -1,0 +1,89 @@
+mobile on '9876543210'
+ 1. d(q0, '9' -> S) = q1
+ 2. d(q1, '8' -> S) = q2
+ 3. d(q2, '7' -> S) = q3
+ 4. d(q3, '6' -> S) = q4
+ 5. d(q4, '5' -> D) = q5
+ 6. d(q5, '4' -> D) = q6
+ 7. d(q6, '3' -> D) = q7
+ 8. d(q7, '2' -> D) = q8
+ 9. d(q8, '1' -> D) = q9
+ 10. d(q9, '0' -> D) = q10
+ final state q10 -> ACCEPTED
+
+mobile on '5876543210'
+ 1. d(q0, '5' -> D) = qD
+ 2. d(qD, '8' -> S) = qD
+ 3. d(qD, '7' -> S) = qD
+ 4. d(qD, '6' -> S) = qD
+ 5. d(qD, '5' -> D) = qD
+ 6. d(qD, '4' -> D) = qD
+ 7. d(qD, '3' -> D) = qD
+ 8. d(qD, '2' -> D) = qD
+ 9. d(qD, '1' -> D) = qD
+ 10. d(qD, '0' -> D) = qD
+ final state qD -> REJECTED
+
+mobile on '987654321'
+ 1. d(q0, '9' -> S) = q1
+ 2. d(q1, '8' -> S) = q2
+ 3. d(q2, '7' -> S) = q3
+ 4. d(q3, '6' -> S) = q4
+ 5. d(q4, '5' -> D) = q5
+ 6. d(q5, '4' -> D) = q6
+ 7. d(q6, '3' -> D) = q7
+ 8. d(q7, '2' -> D) = q8
+ 9. d(q8, '1' -> D) = q9
+ final state q9 -> REJECTED
+
+plate on 'TN45AB1234'
+ 1. d(q0, 'T' -> L) = q1
+ 2. d(q1, 'N' -> L) = q2
+ 3. d(q2, '4' -> D) = q3
+ 4. d(q3, '5' -> D) = q4
+ 5. d(q4, 'A' -> L) = q5
+ 6. d(q5, 'B' -> L) = q6
+ 7. d(q6, '1' -> D) = q7
+ 8. d(q7, '2' -> D) = q8
+ 9. d(q8, '3' -> D) = q9
+ 10. d(q9, '4' -> D) = q10
+ final state q10 -> ACCEPTED
+
+plate on 'TN45ABC1234'
+ 1. d(q0, 'T' -> L) = q1
+ 2. d(q1, 'N' -> L) = q2
+ 3. d(q2, '4' -> D) = q3
+ 4. d(q3, '5' -> D) = q4
+ 5. d(q4, 'A' -> L) = q5
+ 6. d(q5, 'B' -> L) = q6
+ 7. d(q6, 'C' -> L) = qD
+ 8. d(qD, '1' -> D) = qD
+ 9. d(qD, '2' -> D) = qD
+ 10. d(qD, '3' -> D) = qD
+ 11. d(qD, '4' -> D) = qD
+ final state qD -> REJECTED
+
+time on '23:59'
+ 1. d(q0, '2' -> 2) = q2
+ 2. d(q2, '3' -> 3) = q3
+ 3. d(q3, ':' -> :) = q4
+ 4. d(q4, '5' -> 5) = q5
+ 5. d(q5, '9' -> 9) = q6
+ final state q6 -> ACCEPTED
+
+time on '23:60'
+ 1. d(q0, '2' -> 2) = q2
+ 2. d(q2, '3' -> 3) = q3
+ 3. d(q3, ':' -> :) = q4
+ 4. d(q4, '6' -> 6) = qD
+ 5. d(qD, '0' -> 0) = qD
+ final state qD -> REJECTED
+
+time on '24:00'
+ 1. d(q0, '2' -> 2) = q2
+ 2. d(q2, '4' -> 4) = qD
+ 3. d(qD, ':' -> :) = qD
+ 4. d(qD, '0' -> 0) = qD
+ 5. d(qD, '0' -> 0) = qD
+ final state qD -> REJECTED
+
